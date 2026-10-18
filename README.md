@@ -61,7 +61,3 @@ tests/                  Application contract tests
 The application loads saved scikit-learn pipelines for inference; it does not train a model when it starts or when a CSV is uploaded. Model training is a separate workflow. A model appears in the prediction page only when its registry entry is active, its artifact is present, and the current dataset meets its feature requirements.
 
 CSV files are ignored by Git to keep employee data out of the repository. Add your dataset locally; don’t commit private or identifiable employee information. Model files use Python pickle formats, so only run artifacts from sources you trust.
-
-## License
-
-No license has been added yet. Until one is selected, reuse and redistribution are not explicitly licensed.
