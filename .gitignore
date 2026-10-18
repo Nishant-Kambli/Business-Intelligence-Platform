@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.streamlit/secrets.toml
+.DS_Store
+Thumbs.db
+
+# Data files are kept local and are not published
+*.csv

@@ -1,0 +1,60 @@
+{
+  "model_id": "attrition_prediction",
+  "display_name": "Attrition Prediction",
+  "task": "classification",
+  "target": "attrition",
+  "artifact": "attrition_model.pkl",
+  "active": true,
+  "positive_label": "Yes",
+  "input_groups": {
+    "Employee Profile": ["age", "gender", "marital_status"],
+    "Employment": ["department", "job_role", "business_travel", "overtime", "experience", "total_working_years", "years_in_current_role"],
+    "Compensation": ["salary"],
+    "Engagement": ["job_satisfaction", "environment_satisfaction", "job_involvement", "relationship_satisfaction", "work_life_balance"]
+  },
+  "field_labels": {
+    "age": "Age", "gender": "Gender", "marital_status": "Marital status", "department": "Department",
+    "job_role": "Job role", "business_travel": "Business travel", "overtime": "Works overtime",
+    "experience": "Years at company", "total_working_years": "Total work experience",
+    "years_in_current_role": "Years in current role", "salary": "Monthly income",
+    "job_satisfaction": "Job satisfaction", "environment_satisfaction": "Work environment satisfaction",
+    "job_involvement": "Work involvement", "relationship_satisfaction": "Work relationships",
+    "work_life_balance": "Work-life balance", "education": "Education", "daily_rate": "Daily rate",
+    "distance_from_home": "Distance from home", "education_field": "Education field", "hourly_rate": "Hourly rate",
+    "job_level": "Job level", "monthly_rate": "Monthly rate", "num_companies_worked": "Previous employers",
+    "percent_salary_hike": "Recent pay increase", "performance_rating": "Performance rating",
+    "stock_option_level": "Equity options", "training_times_last_year": "Training sessions last year",
+    "years_since_last_promotion": "Years since last promotion", "years_with_current_manager": "Years with current manager"
+  },
+  "field_choices": {
+    "education": {"1": "Below college", "2": "College", "3": "Bachelor's degree", "4": "Master's degree", "5": "Doctorate"},
+    "job_satisfaction": {"1": "Low", "2": "Medium", "3": "High", "4": "Very high"},
+    "environment_satisfaction": {"1": "Low", "2": "Medium", "3": "High", "4": "Very high"},
+    "relationship_satisfaction": {"1": "Low", "2": "Medium", "3": "High", "4": "Very high"},
+    "job_involvement": {"1": "Low", "2": "Medium", "3": "High", "4": "Very high"},
+    "work_life_balance": {"1": "Poor", "2": "Fair", "3": "Good", "4": "Excellent"},
+    "performance_rating": {"1": "Low", "2": "Good", "3": "Excellent", "4": "Outstanding"},
+    "job_level": {"1": "Level 1", "2": "Level 2", "3": "Level 3", "4": "Level 4", "5": "Level 5"},
+    "stock_option_level": {"0": "None", "1": "Basic", "2": "Standard", "3": "Enhanced"},
+    "business_travel": {"Non-Travel": "Does not travel", "Travel_Rarely": "Travels occasionally", "Travel_Frequently": "Travels frequently"},
+    "overtime": {"No": "No", "Yes": "Yes"}
+  },
+  "required_fields": [
+    "age", "business_travel", "daily_rate", "department", "distance_from_home",
+    "education", "education_field", "environment_satisfaction", "gender", "hourly_rate",
+    "job_involvement", "job_level", "job_role", "job_satisfaction", "marital_status",
+    "salary", "monthly_rate", "num_companies_worked", "overtime", "percent_salary_hike",
+    "performance_rating", "relationship_satisfaction", "stock_option_level", "total_working_years",
+    "training_times_last_year", "work_life_balance", "experience", "years_in_current_role",
+    "years_since_last_promotion", "years_with_current_manager"
+  ],
+  "required_source_columns": [
+    "Age", "BusinessTravel", "DailyRate", "Department", "DistanceFromHome",
+    "Education", "EducationField", "EnvironmentSatisfaction", "Gender", "HourlyRate",
+    "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction", "MaritalStatus",
+    "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "OverTime", "PercentSalaryHike",
+    "PerformanceRating", "RelationshipSatisfaction", "StockOptionLevel", "TotalWorkingYears",
+    "TrainingTimesLastYear", "WorkLifeBalance", "YearsAtCompany", "YearsInCurrentRole",
+    "YearsSinceLastPromotion", "YearsWithCurrManager"
+  ]
+}

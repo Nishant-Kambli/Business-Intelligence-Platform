@@ -1,0 +1,66 @@
+{
+  "executive_dashboard": {
+    "title": "Executive Dashboard",
+    "page": "app_pages/dashboard.py",
+    "icon": ":material/dashboard:",
+    "required_fields": [],
+    "required_any": [],
+    "optional_fields": ["employee_id", "department", "business_unit", "age", "salary", "attrition"]
+  },
+  "workforce": {
+    "title": "Workforce Analytics",
+    "page": "app_pages/workforce_analytics.py",
+    "icon": ":material/groups:",
+    "required_fields": [],
+    "required_any": [["department", "business_unit", "division", "job_role", "title", "age", "gender", "experience", "employment_status"]],
+    "optional_fields": ["employee_id", "gender", "age", "employment_status", "employee_type", "employee_classification", "start_date"]
+  },
+  "compensation": {
+    "title": "Compensation Analytics",
+    "page": "app_pages/compensation_analytics.py",
+    "icon": ":material/payments:",
+    "required_fields": [],
+    "required_any": [["salary", "pay_rate", "base_pay"]],
+    "optional_fields": ["department", "business_unit", "job_role", "title", "pay_zone"]
+  },
+  "engagement": {
+    "title": "Employee Engagement",
+    "page": "app_pages/employee_engagement.py",
+    "icon": ":material/mood:",
+    "required_fields": [],
+    "required_any": [["satisfaction", "satisfaction_score", "engagement_score", "work_life_balance_score", "job_satisfaction", "environment_satisfaction"]],
+    "optional_fields": ["department", "business_unit", "division", "gender", "employee_id", "survey_date"]
+  },
+  "performance": {
+    "title": "Performance Intelligence",
+    "page": "app_pages/performance_intelligence.py",
+    "icon": ":material/monitoring:",
+    "required_fields": [],
+    "required_any": [["performance_score", "employee_rating", "performance_rating"]],
+    "optional_fields": ["department", "business_unit", "division", "job_role", "title", "employee_id", "survey_date"]
+  },
+  "training": {
+    "title": "Training Analytics",
+    "page": "app_pages/training_analytics.py",
+    "icon": ":material/school:",
+    "required_fields": [],
+    "required_any": [["training_program", "training_outcome", "training_type", "training_cost", "training_duration_days"]],
+    "optional_fields": ["employee_id", "department", "business_unit", "training_date", "training_cost", "training_duration_days", "training_outcome"]
+  },
+  "recruitment": {
+    "title": "Recruitment Analytics",
+    "page": "app_pages/recruitment_analytics.py",
+    "icon": ":material/person_search:",
+    "required_fields": [],
+    "required_any": [["applicant_id", "application_date", "requisition_id", "hiring_status", "source_channel"]],
+    "optional_fields": ["application_date", "hiring_status", "source_channel", "department", "job_role", "title"]
+  },
+  "retention": {
+    "title": "Attrition Analytics",
+    "page": "app_pages/retention_intelligence.py",
+    "icon": ":material/insights:",
+    "required_fields": ["attrition"],
+    "required_any": [],
+    "optional_fields": ["department", "business_unit", "job_role", "age", "experience", "salary"]
+  }
+}

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+  color-scheme: light;
+  --ink: #1f2937;
+  --muted: #64748b;
+  --teal: #087e8b;
+  --teal-soft: #e6f4f3;
+  --paper: #ffffff;
+  --surface: #f8fafc;
+  --line: #e2e8f0;
+}
+
+html, body, .stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stHeader"],
+[data-testid="stMain"],
+[data-testid="stMainBlockContainer"] {
+  background: var(--paper) !important;
+  color: var(--ink) !important;
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ink) !important;
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: -0.025em;
+}
+
+p, li, span, small, [data-testid="stCaptionContainer"] {
+  color: var(--ink);
+}
+
+label,
+.stSlider label,
+.stSelectbox label,
+.stNumberInput label,
+.stTextInput label,
+.stRadio label,
+.stCheckbox label,
+.stDateInput label,
+.stFileUploader label,
+[data-testid="stWidgetLabel"],
+[data-testid="stWidgetLabel"] p {
+  color: var(--ink) !important;
+  font-weight: 600 !important;
+}
+
+[data-testid="stSidebar"] {
+  background: #ffffff !important;
+  border-right: 1px solid var(--line);
+}
+[data-testid="stSidebar"] * {
+  color: var(--ink) !important;
+}
+[data-testid="stSidebar"] [data-testid="stNavLink"] {
+  border-radius: 10px;
+}
+[data-testid="stSidebar"] [data-testid="stNavLink"]:hover,
+[data-testid="stSidebar"] [data-testid="stNavLink"][aria-current="page"] {
+  background: var(--teal-soft) !important;
+}
+
+[data-testid="stMetric"],
+[data-testid="stVerticalBlockBorderWrapper"],
+div[data-testid="stForm"] {
+  background: #ffffff !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 14px;
+}
+[data-testid="stMetric"] {
+  padding: 18px 20px;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+}
+[data-testid="stMetricLabel"],
+[data-testid="stMetricDelta"] { color: var(--muted) !important; }
+[data-testid="stMetricValue"] { color: var(--ink) !important; font-family: 'Manrope', sans-serif; }
+div[data-testid="stForm"] { padding: 1rem 1.2rem; }
+
+/* Keep all form controls on the same light surface with readable values. */
+div[data-baseweb="select"] > div,
+div[data-baseweb="input"] > div,
+div[data-baseweb="textarea"] > div,
+div[data-testid="stDateInput"] input,
+div[data-testid="stNumberInput"] input,
+div[data-testid="stTextInput"] input,
+div[data-testid="stTextArea"] textarea,
+div[data-testid="stFileUploader"] section {
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  border-color: #cbd5e1 !important;
+}
+input, textarea, [data-baseweb="select"] *, [data-baseweb="input"] * {
+  color: var(--ink) !important;
+}
+ul[role="listbox"],
+li[role="option"],
+div[role="option"] {
+  background: #ffffff !important;
+  color: var(--ink) !important;
+}
+[data-baseweb="popover"],
+[data-baseweb="calendar"],
+[data-baseweb="calendar"] * {
+  background-color: #ffffff !important;
+  color: var(--ink) !important;
+}
+li[role="option"]:hover,
+div[role="option"]:hover,
+li[role="option"][aria-selected="true"] {
+  background: var(--teal-soft) !important;
+  color: var(--ink) !important;
+}
+[data-testid="stSlider"] [data-baseweb="slider"] > div:first-child {
+  background: #e2e8f0 !important;
+}
+[data-testid="stSlider"] [role="slider"] { background: var(--teal) !important; }
+[data-testid="stRadio"] label,
+[data-testid="stCheckbox"] label { color: var(--ink) !important; }
+
+/* Tabs and expanders use light surfaces and dark labels on every page. */
+[data-testid="stTabs"] [role="tablist"] {
+  border-bottom: 1px solid var(--line);
+}
+[data-testid="stTabs"] button[role="tab"] {
+  color: var(--ink) !important;
+}
+[data-testid="stTabs"] button[role="tab"][aria-selected="true"] {
+  color: var(--teal) !important;
+  border-bottom-color: var(--teal) !important;
+}
+[data-testid="stExpander"] details,
+[data-testid="stExpander"] summary,
+[data-testid="stExpander"] details > summary,
+[data-testid="stExpander"] details > div {
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  border-color: var(--line) !important;
+}
+[data-testid="stExpander"] summary p,
+[data-testid="stExpander"] summary span {
+  color: var(--ink) !important;
+}
+
+/* Dataframes and native chart containers inherit the global light theme. */
+[data-testid="stDataFrame"],
+[data-testid="stTable"],
+[data-testid="stVegaLiteChart"],
+[data-testid="stArrowVegaLiteChart"],
+[data-testid="stPlotlyChart"],
+[data-testid="stPyplot"] {
+  background: #ffffff !important;
+  color: var(--ink) !important;
+}
+
+button[kind="primary"],
+[data-testid="stFormSubmitButton"] button {
+  background: var(--teal) !important;
+  border-color: var(--teal) !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+button[kind="secondary"],
+[data-testid="stDownloadButton"] button {
+  background: #ffffff !important;
+  color: var(--ink) !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 10px;
+}
+
+.hero { padding: 1.25rem 0 1.5rem; }
+.hero-kicker, .section-label {
+  color: var(--teal) !important;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  font-size: .74rem;
+  font-weight: 700;
+}
+.hero-copy { color: var(--muted) !important; font-size: 1.08rem; max-width: 720px; }
+.risk-card {
+  background: #ffffff;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--teal);
+  border-radius: 14px;
+  padding: 1.4rem 1.6rem;
+}
+.risk-high { border-left-color: #d5534d; }
+.risk-low { border-left-color: #238568; }
+.disclaimer { color: var(--muted) !important; font-size: .88rem; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: .9rem 1rem; }
+.workflow { display: flex; gap: .55rem; flex-wrap: wrap; align-items: center; }
+.workflow-step { background: #ffffff; color: var(--ink); border: 1px solid var(--line); border-radius: 12px; padding: .75rem 1rem; font-weight: 600; }
+.workflow-arrow { color: var(--teal); font-weight: 800; }

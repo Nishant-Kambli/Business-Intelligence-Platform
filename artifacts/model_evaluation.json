@@ -1,0 +1,40 @@
+{
+  "dataset": {
+    "name": "IBM_HR_Cleaned.csv",
+    "rows": 1441,
+    "attrition_yes": 235,
+    "attrition_no": 1206,
+    "positive_label": "Yes"
+  },
+  "final_model": "Logistic Regression",
+  "selection_note": "Matches the notebook's selected tuned model. The notebook selected by held-out test F1, so displayed test results are descriptive and should not be reused to tune thresholds.",
+  "metric_source": "Saved outputs from the existing notebook run; positive class is Attrition=Yes.",
+  "balanced_test": [
+    {"Model": "Logistic Regression", "Accuracy": 0.761246, "Precision": 0.369048, "Recall": 0.659574, "F1-score": 0.473282, "ROC-AUC": 0.781080},
+    {"Model": "Decision Tree", "Accuracy": 0.761246, "Precision": 0.250000, "Recall": 0.234043, "F1-score": 0.241758, "ROC-AUC": 0.548839},
+    {"Model": "Random Forest", "Accuracy": 0.833910, "Precision": 0.428571, "Recall": 0.063830, "F1-score": 0.111111, "ROC-AUC": 0.720811}
+  ],
+  "tuned_test": [
+    {"Model": "Logistic Regression", "Accuracy": 0.785467, "Precision": 0.405063, "Recall": 0.680851, "F1-score": 0.507937, "ROC-AUC": 0.796554},
+    {"Model": "Random Forest", "Accuracy": 0.844291, "Precision": 0.533333, "Recall": 0.340426, "F1-score": 0.415584, "ROC-AUC": 0.747231},
+    {"Model": "Decision Tree", "Accuracy": 0.705882, "Precision": 0.243243, "Recall": 0.382979, "F1-score": 0.297521, "ROC-AUC": 0.580754}
+  ],
+  "tuned_cv_f1": [
+    {"Model": "Logistic Regression", "F1-score (mean)": 0.511514},
+    {"Model": "Decision Tree", "F1-score (mean)": 0.425391},
+    {"Model": "Random Forest", "F1-score (mean)": 0.529120}
+  ],
+  "final_model_cross_validation": {
+    "Model": "Logistic Regression",
+    "folds": 5,
+    "Accuracy": {"mean": 0.771, "std": 0.022},
+    "Precision": {"mean": 0.394, "std": 0.033},
+    "Recall": {"mean": 0.734, "std": 0.060},
+    "F1-score": {"mean": 0.512, "std": 0.030}
+  },
+  "limitations": [
+    "The final estimator was selected using held-out test F1 in the notebook; an untouched validation set would give a less biased final estimate.",
+    "The pickle depends on compatible scikit-learn and joblib versions.",
+    "Model probabilities are not calibrated confidence estimates."
+  ]
+}

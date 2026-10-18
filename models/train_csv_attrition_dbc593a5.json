@@ -1,0 +1,246 @@
+{
+  "model_id": "train_csv_attrition_dbc593a5",
+  "display_name": "Attrition Prediction · train.csv",
+  "model_name": "Logistic Regression",
+  "task": "classification",
+  "target": "attrition",
+  "target_source_column": "Attrition",
+  "positive_label": "Yes",
+  "source_positive_label": "Left",
+  "dataset": "data/train.csv",
+  "dataset_schema_hash": "dbc593a5",
+  "artifact": "models/train_csv_attrition_dbc593a5.pkl",
+  "active": true,
+  "required_fields": [
+    "age",
+    "gender",
+    "experience",
+    "job_role",
+    "salary",
+    "work_life_balance",
+    "job_satisfaction",
+    "performance_rating",
+    "promotion_count",
+    "overtime",
+    "distance_from_home",
+    "education",
+    "marital_status",
+    "dependents",
+    "job_level",
+    "company_size",
+    "remote_work",
+    "leadership_opportunities",
+    "innovation_opportunities",
+    "company_reputation",
+    "employee_recognition"
+  ],
+  "supported_features": [
+    "age",
+    "gender",
+    "experience",
+    "job_role",
+    "salary",
+    "work_life_balance",
+    "job_satisfaction",
+    "performance_rating",
+    "promotion_count",
+    "overtime",
+    "distance_from_home",
+    "education",
+    "marital_status",
+    "dependents",
+    "job_level",
+    "company_size",
+    "remote_work",
+    "leadership_opportunities",
+    "innovation_opportunities",
+    "company_reputation",
+    "employee_recognition"
+  ],
+  "required_source_columns": [],
+  "numeric_features": [
+    "age",
+    "experience",
+    "promotion_count",
+    "distance_from_home",
+    "dependents"
+  ],
+  "categorical_features": [
+    "gender",
+    "job_role",
+    "salary",
+    "work_life_balance",
+    "job_satisfaction",
+    "performance_rating",
+    "overtime",
+    "education",
+    "marital_status",
+    "job_level",
+    "company_size",
+    "remote_work",
+    "leadership_opportunities",
+    "innovation_opportunities",
+    "company_reputation",
+    "employee_recognition"
+  ],
+  "input_groups": {
+    "Employee Profile": [
+      "age",
+      "gender",
+      "education",
+      "marital_status"
+    ],
+    "Employment": [
+      "experience",
+      "job_role",
+      "promotion_count"
+    ],
+    "Compensation": [
+      "salary"
+    ],
+    "Engagement": [
+      "work_life_balance",
+      "job_satisfaction",
+      "employee_recognition"
+    ],
+    "Performance": [
+      "performance_rating"
+    ],
+    "Other Workforce Factors": [
+      "overtime",
+      "distance_from_home",
+      "dependents",
+      "job_level",
+      "company_size",
+      "remote_work",
+      "leadership_opportunities",
+      "innovation_opportunities",
+      "company_reputation"
+    ]
+  },
+  "field_labels": {
+    "age": "Age",
+    "gender": "Gender",
+    "experience": "Experience",
+    "job_role": "Job Role",
+    "salary": "Salary",
+    "work_life_balance": "Work Life Balance",
+    "job_satisfaction": "Job Satisfaction",
+    "performance_rating": "Performance Rating",
+    "promotion_count": "Promotion Count",
+    "overtime": "Overtime",
+    "distance_from_home": "Distance From Home",
+    "education": "Education",
+    "marital_status": "Marital Status",
+    "dependents": "Dependents",
+    "job_level": "Job Level",
+    "company_size": "Company Size",
+    "remote_work": "Remote Work",
+    "leadership_opportunities": "Leadership Opportunities",
+    "innovation_opportunities": "Innovation Opportunities",
+    "company_reputation": "Company Reputation",
+    "employee_recognition": "Employee Recognition"
+  },
+  "metrics": {
+    "accuracy": 0.748489932885906,
+    "precision": 0.7273501362397821,
+    "recall": 0.7535285815102328,
+    "f1": 0.740207972270364,
+    "roc_auc": 0.8408995783311233,
+    "cv_f1": 0.7435451569364753
+  },
+  "selection_metric": "Stratified cross-validation F1-score for the positive attrition outcome",
+  "confusion_matrix": [
+    [
+      4651,
+      1601
+    ],
+    [
+      1397,
+      4271
+    ]
+  ],
+  "best_params": {
+    "model__C": 0.17233288831716698
+  },
+  "training_rows": 59598,
+  "training_class_counts": {
+    "No": 31260,
+    "Yes": 28338
+  },
+  "cross_validation_folds": 5,
+  "all_model_results": [
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.748489932885906,
+      "precision": 0.7273501362397821,
+      "recall": 0.7535285815102328,
+      "f1": 0.740207972270364,
+      "roc_auc": 0.8408995783311233,
+      "confusion_matrix": [
+        [
+          4651,
+          1601
+        ],
+        [
+          1397,
+          4271
+        ]
+      ],
+      "cv_f1": 0.7435451569364753,
+      "best_params": {
+        "model__C": 0.17233288831716698
+      }
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.7443791946308724,
+      "precision": 0.7187447838424303,
+      "recall": 0.7597035991531405,
+      "f1": 0.7386568316322154,
+      "roc_auc": 0.8379333433343672,
+      "confusion_matrix": [
+        [
+          4567,
+          1685
+        ],
+        [
+          1362,
+          4306
+        ]
+      ],
+      "cv_f1": 0.7433096437267538,
+      "best_params": {
+        "model__max_depth": 20,
+        "model__max_features": "sqrt",
+        "model__min_samples_leaf": 4,
+        "model__min_samples_split": 9,
+        "model__n_estimators": 231
+      }
+    },
+    {
+      "model": "Decision Tree",
+      "accuracy": 0.7295302013422819,
+      "precision": 0.697224015493867,
+      "recall": 0.7621736062103035,
+      "f1": 0.7282535401213756,
+      "roc_auc": 0.8098609997376705,
+      "confusion_matrix": [
+        [
+          4376,
+          1876
+        ],
+        [
+          1348,
+          4320
+        ]
+      ],
+      "cv_f1": 0.7270162261569484,
+      "best_params": {
+        "model__max_depth": 10,
+        "model__min_samples_leaf": 8,
+        "model__min_samples_split": 5
+      }
+    }
+  ]
+}
